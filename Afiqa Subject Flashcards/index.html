@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afiqa Subject Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="app-title">Afiqa Subject Flashcards</h1>
+        
+        <!-- Dropdown untuk memilih materi -->
+        <div class="selector-area" id="selector-area"> 
+            <select id="subject-selector">
+                <option value="Sosiologi">Sosiologi</option>
+                <option value="Matematika">Matematika</option>
+                <option value="Informatika">Informatika</option>
+            </select>
+            <button id="start-session-btn">Mulai Latihan</button>
+        </div>
+
+        <!-- Area Kartu Flashcard -->
+        <div class="flashcard-area" id="flashcard-area" style="display: none;">
+            <div class="card-container" id="card-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="card-face card-front" id="card-front">
+                        <!-- Istilah/Pertanyaan di sini -->
+                    </div>
+                    <div class="card-face card-back" id="card-back">
+                        <!-- Jawaban/Definisi di sini -->
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-controls">
+                <button id="prev-btn" class="nav-btn"><span class="material-icons"></span> Sebelumnya</button>
+                <button id="quiz-btn" class="nav-btn">Mulai Kuis</button>
+                <button id="next-btn" class="nav-btn">Selanjutnya <span class="material-icons"></span></button>
+            </div>
+        </div>
+
+        <!-- Area Kuis (Tersembunyi secara default) -->
+        <div class="quiz-area" id="quiz-area" style="display: none;">
+            <h2 id="quiz-question">Pertanyaan Kuis Muncul di sini?</h2>
+            <div class="answer-buttons" id="answer-buttons">
+                <!-- Tombol Jawaban Muncul di sini -->
+            </div>
+            <p id="quiz-feedback"></p>
+            <button id="next-question-btn" style="display: none;">Pertanyaan Selanjutnya</button>
+            <button id="back-to-menu-btn">Kembali ke Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
