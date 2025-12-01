@@ -1,0 +1,167 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%); /* Gradasi Biru-Putih */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.app-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    text-align: center;
+}
+
+.app-title {
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+/* --- Selector Area --- */
+.selector-area {
+    margin-bottom: 20px;
+}
+
+#subject-selector {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #0d47a1;
+}
+
+#start-session-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* --- Flashcard Area --- */
+.card-container {
+    perspective: 1000px; /* Efek 3D */
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Kelas CSS yang ditambahkan JS saat kartu diklik */
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Menyembunyikan sisi belakang saat tidak menghadap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-size: 1.2em;
+}
+
+.card-front {
+    background-color: #ffffff;
+    color: #0d47a1;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #0d47a1, #1e88e5); /* Gradasi Biru */
+    color: white;
+    transform: rotateY(180deg); /* Memposisikan sisi belakang */
+}
+
+/* --- Navigation Controls --- */
+.navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-btn {
+    background-color: #bbdefb;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #90caf9;
+}
+
+#card-counter {
+    font-size: 1em;
+    font-weight: bold;
+}
+/* --- Quiz Area Styles --- */
+.quiz-area h2 {
+    color: #0d47a1;
+    margin-bottom: 25px;
+}
+
+.answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-answer {
+    padding: 15px;
+    border: 1px solid #bbdefb;
+    border-radius: 8px;
+    background-color: #fafafe;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.btn-answer:hover {
+    background-color: #e3f2fd;
+}
+
+#quiz-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#next-question-btn, #back-to-menu-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
